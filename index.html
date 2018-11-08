@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head> 
+
+		<title>Hello, world!</title>
+
+		<!-- Required meta tags -->
+    	<meta charset="utf-8">
+    	<!-- Allow for responsive website -->
+    	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    	<!-- Bootstrap CSS -->
+    	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    	
+    	<!-- Optional JavaScript -->
+    	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    	<!--CSS refernce-->
+    	<link rel="stylesheet" type="text/css" href="project.css"
+    </head>
+  
+  <body>
+  	<!--Header banner-->
+  	<div class = "jumbotron-fluid text-center">
+    	<h1>Hello world!</h1>
+    	<h3>Welcome to my website.</h3>
+    </div>
+
+<div class="container-fluid" style="margin-top: 30px"> <!--container for everything-->
+	
+	<!--Photo and description-->
+	<div class="row">
+		<div class="col-sm-5">
+			<h2 style="text-align: left">Here is a little about me...</h2><br>
+				<img src="professional.jpg" alt="professional" class="img-thumbnail" height="245" width="230" align="left">
+				<br><br><h4 style="display: inline-block; text-align: left;">In December I will be graduating from SNHU with a degree in IT concentrating in Web Development and Design. I have always been passionate about design and creating content that make people happy. The rest of this page are just some fun facts about me.</h4>
+		</div>
+		<div class="col-sm-7">
+			<h3 style="text-align: left">I'm a Black Belt...</h3>
+				<img src="blackbelt.jpg" alt="blackbelt" class="img-thumbnail" height="300" width="400" align="left">
+				<h4 style="display: inline-block; text-align: left;">Almost five years ago I received my black belt in Karate. Martial Arts is something I have been passionate about for years. I worked for twelve years to obtain this amazing honor.</h4>
+		</div>
+
+		<!--Embedded Video and description-->
+		<div class="col-sm-12" style="margin-top: 30px">
+			<br><h3>I've been Skydiving...</h3>
+			<h4>Another fantastic experience I had recently was skydiving.</h4>
+			<div class="embed-responsive embed-responsive-16by9" height="500" width="700">
+  				<iframe class="embed-responsive-item" src="skydive.mp4" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>	
+
+	<!--Button to Hidden Items-->
+	<br><button type="button" class="btn btn-secondary" data-container="body" onclick= "hiddenFunction()"> Click for Hidden Information </button><br>
+
+	<div class="hidden" style="margin-top: 30px">
+		<p id= "hiddenLanguage"></p>
+		<p id= "hiddenAgent"></p>
+		<p id= "hiddenTime"></p>
+	</div>
+
+	<!--Javascript to call hidden items-->	
+	<script>
+		function hiddenFunction() {
+      	    var language = "Language of the browser: " + navigator.language;
+   			document.getElementById("hiddenLanguage").innerHTML = language;//gets browser language 
+   			   		
+   			var userAgent = "User-agent header sent: " + navigator.userAgent;
+    		document.getElementById("hiddenAgent").innerHTML = userAgent;//gets user agent information
+
+    		var date = new Date();
+    		var timeZone = "Time Zone Offset: " + date.getTimezoneOffset();
+   			document.getElementById ("hiddenTime").innerHTML = timeZone;//gets timezone offset
+   		}
+   	</script>
+</div>
+</body>
+</html>
